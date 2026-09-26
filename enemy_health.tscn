@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://danvffufsriaq"]
+
+[ext_resource type="Script" uid="uid://csa7sx1h2lgky" path="res://enemy_health.gd" id="1_eac7v"]
+
+[node name="EnemyHealth" type="CanvasLayer" unique_id=1520343953]
+script = ExtResource("1_eac7v")
+
+[node name="HealthLabel" type="Label" parent="." unique_id=992110465]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "Enemy Health: "

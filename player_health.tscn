@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b3edscprb4h8k"]
+
+[ext_resource type="Script" uid="uid://uhmpafygsnis" path="res://player_stats.gd" id="1_rr4ua"]
+
+[node name="Player Stats" type="CanvasLayer" unique_id=1581110402]
+script = ExtResource("1_rr4ua")
+
+[node name="HealthLabel" type="Label" parent="." unique_id=819113166]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Health: "

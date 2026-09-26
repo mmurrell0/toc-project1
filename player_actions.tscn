@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bquqyis8p54l8"]
+
+[ext_resource type="Script" uid="uid://ckj35sbmcywvy" path="res://player_actions.gd" id="1_eqm8i"]
+
+[node name="PlayerActions" type="CanvasLayer" unique_id=1648233948]
+script = ExtResource("1_eqm8i")
+
+[node name="Button Container" type="HBoxContainer" parent="." unique_id=1619370385]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Attack Button" type="Button" parent="Button Container" unique_id=143161500]
+layout_mode = 2
+text = "Attack"
+
+[connection signal="pressed" from="Button Container/Attack Button" to="." method="_on_attack_button_pressed"]
