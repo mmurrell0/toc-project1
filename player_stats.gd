@@ -16,5 +16,5 @@ func take_damage(damage: int):
 	if health <= 0:
 		health = 0
 
-func _on_player_actions_player_attacked(damage: int) -> void:
+func _on_enemy_attack_player(damage: int) -> void:
 	take_damage(damage)

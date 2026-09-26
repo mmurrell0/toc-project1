@@ -18,6 +18,9 @@ position = Vector2(573, 310)
 
 [node name="CombatController" parent="." unique_id=22524856 instance=ExtResource("6_ryrav")]
 
+[connection signal="next_turn" from="." to="Enemy" method="_on_game_next_turn"]
 [connection signal="next_turn" from="." to="CombatController" method="_on_game_next_turn"]
+[connection signal="new_turn" from="PlayerActions" to="." method="_on_player_actions_new_turn"]
 [connection signal="player_attacked" from="PlayerActions" to="." method="_on_player_actions_player_attacked"]
 [connection signal="player_attacked" from="PlayerActions" to="Enemy" method="_on_player_actions_player_attacked"]
+[connection signal="attack_player" from="Enemy" to="Player Stats" method="_on_enemy_attack_player"]

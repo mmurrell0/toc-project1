@@ -23,4 +23,9 @@ size_flags_vertical = 4
 layout_mode = 2
 text = "Attack"
 
+[node name="Pass Button" type="Button" parent="Button Container" unique_id=1300051402]
+layout_mode = 2
+text = "Pass"
+
 [connection signal="pressed" from="Button Container/Attack Button" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="Button Container/Pass Button" to="." method="_on_pass_button_pressed"]

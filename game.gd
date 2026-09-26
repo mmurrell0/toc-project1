@@ -15,3 +15,6 @@ func _process(delta: float) -> void:
 func _on_player_actions_player_attacked(damage: int) -> void:
 	print_debug("Player Attacked")
 	
+
+func _on_player_actions_new_turn() -> void:
+	next_turn.emit()

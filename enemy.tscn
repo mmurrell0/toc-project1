@@ -13,3 +13,6 @@ script = ExtResource("2_qi2p4")
 script = ExtResource("3_qi2p4")
 
 [node name="EnemyHealth" parent="." unique_id=1520343953 instance=ExtResource("4_iifgy")]
+
+[connection signal="next_turn" from="." to="EnemyStateMachine" method="_on_enemy_next_turn"]
+[connection signal="attack_player" from="EnemyStateMachine" to="." method="_on_enemy_state_machine_attack_player"]
