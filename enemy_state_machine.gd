@@ -19,13 +19,10 @@ var playerKilled: bool = false
 func _ready() -> void:
 	combatController = get_parent().get_parent().find_child("CombatController")
 
-func _process(delta: float) -> void:
-	pass
-
-
 func _state_wait():
 	# Do stuff maybe
 	
+	print_debug("WAITING")
 	# If the enemy dies during the player's turn transition to end combat state
 	if get_parent().find_child("EnemyHealth").health <= 0:
 		_change_state(States.END_COMBAT)
@@ -65,10 +62,13 @@ func _state_decide():
 func _state_attack():
 	# Do stuff maybe
 	attack_player.emit(20)
+	if get_parent().get_parent().find_child("Player Stats").health <= 0:
+		playerKilled = true
 	
 	# If the player is killed during the attack transition to the end combat state
 	if playerKilled:
 		_change_state(States.END_COMBAT)
+		print_debug("PLAYER KILLED")
 		print_debug("ENDING COMBAT")
 		_process_states()
 	# Else transition to the wait state and signal that it is the player's turn
@@ -80,6 +80,8 @@ func _state_attack():
 
 func _state_defend():
 	# Do stuff maybe
+	# Technically a heal state, but I am out of time to make it work
+	get_parent().find_child("EnemyHealth").health += 5
 	
 	# Signal that it is the player's turn, and transition to the wait state
 	combatController.state = combatController.States.PLAYER_TURN

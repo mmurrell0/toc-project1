@@ -20,6 +20,7 @@ position = Vector2(573, 310)
 
 [connection signal="next_turn" from="." to="Enemy" method="_on_game_next_turn"]
 [connection signal="next_turn" from="." to="CombatController" method="_on_game_next_turn"]
+[connection signal="hurt_player" from="PlayerActions" to="Player Stats" method="_on_player_actions_hurt_player"]
 [connection signal="new_turn" from="PlayerActions" to="." method="_on_player_actions_new_turn"]
 [connection signal="player_attacked" from="PlayerActions" to="." method="_on_player_actions_player_attacked"]
 [connection signal="player_attacked" from="PlayerActions" to="Enemy" method="_on_player_actions_player_attacked"]

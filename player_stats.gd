@@ -18,3 +18,7 @@ func take_damage(damage: int):
 
 func _on_enemy_attack_player(damage: int) -> void:
 	take_damage(damage)
+
+
+func _on_player_actions_hurt_player(damage: int) -> void:
+	take_damage(damage)

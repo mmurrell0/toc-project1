@@ -27,5 +27,10 @@ text = "Attack"
 layout_mode = 2
 text = "Pass"
 
+[node name="Hurt Player Button" type="Button" parent="Button Container" unique_id=1718252832]
+layout_mode = 2
+text = "Hurt Player"
+
 [connection signal="pressed" from="Button Container/Attack Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Button Container/Pass Button" to="." method="_on_pass_button_pressed"]
+[connection signal="pressed" from="Button Container/Hurt Player Button" to="." method="_on_hurt_player_button_pressed"]
